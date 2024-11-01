@@ -8,8 +8,7 @@ Fisher divergence) reduces to solving an eigenvalue problem.
 In this repository, we provide simple examples of EigenVI using normalized Hermite polynomials.
 
 EigenVI is described further in the paper:
-```
+
 Diana Cai, Chirag Modi, Charles C. Margossian, Robert M. Gower, David M. Blei, Lawrence K. Saul.
-EigenVI: score-based variational inference with orthogonal function expansions.
+[EigenVI: score-based variational inference with orthogonal function expansions.](https://arxiv.org/abs/2410.24054)
 _NeurIPS_, 2024.
-```
