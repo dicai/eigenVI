@@ -21,12 +21,14 @@ norm_const = l -> inv(sqrt(sqrt(2π) * factorial(l)))
 NHP(x, l) = norm_const(l) * exp(-0.25*x^2) * HP(x, l)
 
 # derivative of NHP
-function DNHP(x, l)
-    l == 0 && return 0.0
-    nc = norm_const(l)
-    expfac = exp(-0.25*x^2)
-    nc * expfac * (l * HP(x, l-1) - 0.5 * x * HP(x, l))
-end
+#function DNHP(x, l)
+#    l == 0 && return 0.0
+#    nc = norm_const(l)
+#    expfac = exp(-0.25*x^2)
+#    nc * expfac * (l * HP(x, l-1) - 0.5 * x * HP(x, l))
+#end
+
+DNHP(x, l) = ForwardDiff.derivative(x -> NHP(x, l), x)
 
 """ Big Hermite polynomials """
 # Normalizing constant for large l
